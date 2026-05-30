@@ -58,25 +58,43 @@ body {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 .container {
-  background-color: #fff;
+  background-color: var(--bg-secondary);
 
-  margin: 0 80px;
+  margin: 80px;
   padding: 40px;
 
   width: 800px;
-  height: 600px;
+
+  border-radius: 15px;
 }
 
 .title {
   display: inline-block;
+
+  color: var(--text-primary);
 }
 
 .city-input {
   margin-top: 20px;
+  padding: 10px 30px;
+
+  width: 100%;
+
+  border-radius: 10px;
+  border: 2px solid var(--bg-primary);
+
+  background-color: #909090;
+  color: var(--bg-secondary);
+
+  font-size: 20px;
+}
+
+.city-input::placeholder {
+  color: var(--bg-secondary);
 }
 
 .general-info {
