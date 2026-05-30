@@ -52,3 +52,46 @@ textarea,
 select {
   font: inherit;
 }
+
+body {
+  background-color: var(--bg-primary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #fff;
+
+  margin: 0 80px;
+  padding: 40px;
+
+  width: 800px;
+  height: 600px;
+}
+
+.title {
+  display: inline-block;
+}
+
+.city-input {
+  margin-top: 20px;
+}
+
+.general-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* keep at the end of file */
+.hidden {
+  display: none;
+}
