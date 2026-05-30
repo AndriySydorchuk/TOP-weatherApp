@@ -5,5 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="first-view">
+        <h1 class="title">Weather App</h1>
+        <hr />
+
+        <input
+          type="text"
+          placeholder="Enter city name"
+          class="city-input"
+          id="cityInput"
+        />
+      </div>
+
+      <div class="second-view hidden">
+        <button class="goback-btn"><=</button>
+        <h1 class="title">Weather App</h1>
+        <hr />
+
+        <div class="general-info">
+          <!-- weather icon -->
+          <p class="generail-info-temp">18°C</p>
+          <p class="generail-info-description">broken clouds</p>
+          <p class="generail-info-location">Rivne, UA</p>
+        </div>
+        <hr />
+
+        <div class="add-info">
+          <div class="add-info-feelslike">
+            <p>17°C</p>
+            <p>Feels like</p>
+          </div>
+
+          <div class="add-info-humidity">
+            <p>43%</p>
+            <p>Humidity</p>
+          </div>
+
+          <div class="add-info-windspeed">
+            <p>4.64 m/s</p>
+            <p>Wind Speed</p>
+          </div>
+
+          <p class="add-info-day">Saturday, May 30, 2026</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
