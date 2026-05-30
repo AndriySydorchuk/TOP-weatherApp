@@ -1,3 +1,5 @@
+import { translateUkToEn } from "./app";
+
 const domManager = (() => {
   const userInputEl = document.getElementById("cityInput");
 
@@ -19,7 +21,10 @@ const domManager = (() => {
   function setData(weatherData) {
     temperatureEl.textContent = weatherData.temperature + "°C";
     descriptionEl.textContent = weatherData.description;
-    locationEl.textContent = weatherData.location;
+
+    translateUkToEn(weatherData.location).then(function (translateData) {
+      locationEl.textContent = translateData.responseData.translatedText;
+    });
 
     feelslikeEl.textContent = weatherData.feelslike + "°C";
     humidityEl.textContent = weatherData.humidity + "%";
