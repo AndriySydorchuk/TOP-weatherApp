@@ -1,3 +1,23 @@
+:root {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2a2a2a;
+
+  --text-primary: #f1f1f1;
+  --text-secondary: #b3b3b3;
+  --text-muted: #808080;
+
+  --border-primary: #333333;
+  --border-secondary: #444444;
+
+  --accent-primary: #4f8cff;
+  --accent-hover: #6aa0ff;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
 /* Box sizing rules */
 *,
 *::before,
