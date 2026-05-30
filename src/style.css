@@ -78,6 +78,22 @@ body {
   color: var(--text-primary);
 }
 
+.loading-box {
+  margin-top: 20px;
+
+  padding: 10px 30px;
+
+  width: 100%;
+
+  border-radius: 10px;
+  border: 2px solid var(--bg-primary);
+
+  background-color: var(--accent-primary);
+  color: var(--bg-secondary);
+
+  font-size: 20px;
+}
+
 .city-input {
   margin-top: 20px;
   padding: 10px 30px;
