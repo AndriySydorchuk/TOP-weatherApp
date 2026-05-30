@@ -97,16 +97,57 @@ body {
   color: var(--bg-secondary);
 }
 
+.goback-btn {
+  background-color: transparent;
+  color: var(--text-primary);
+
+  border: 0;
+
+  transform: scaleX(-1);
+
+  font-size: 30px;
+
+  margin-right: 20px;
+
+  cursor: pointer;
+}
+
 .general-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  color: var(--text-primary);
+
+  padding: 30px;
+
+  font-size: 26px;
+
+  text-align: center;
+}
+
+.general-info-temp {
+  font-size: 56px;
+  font-weight: bold;
 }
 
 .add-info {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+
+  text-align: center;
+
+  color: var(--text-primary);
+
+  font-size: 22px;
+
+  padding-top: 20px;
+}
+
+.add-info div {
+  border-right: 2px solid var(--text-primary);
 }
 
 /* keep at the end of file */
