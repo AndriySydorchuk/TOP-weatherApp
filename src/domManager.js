@@ -1,4 +1,5 @@
-import { convertFahrenheitToCelsius, convertMphToMs, formatDate } from ".";
+import { formatDate } from ".";
+import { convertFahrenheitToCelsius, convertMphToMs } from "./convert";
 
 const domManager = (() => {
   const userInputEl = document.getElementById("cityInput");
