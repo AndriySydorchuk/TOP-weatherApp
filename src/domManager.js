@@ -2,6 +2,8 @@ const domManager = (() => {
   const userInputEl = document.getElementById("cityInput");
 
   //status boxes
+  const loadingBox = document.querySelector(".loading-box");
+
   const failedBox = document.querySelector(".failed-box");
   const failedText = document.querySelector(".failed-box-text");
 
@@ -55,7 +57,7 @@ const domManager = (() => {
   }
 
   function renderInfoView(weatherData) {
-    hideFailed();
+    hideLoading();
     setData(weatherData);
     showInfoView();
   }
@@ -66,6 +68,8 @@ const domManager = (() => {
   }
 
   function showFailed(failedLocation) {
+    hideLoading();
+
     failedBox.classList.remove("hidden");
     userInputEl.classList.add("failed");
 
@@ -81,7 +85,17 @@ const domManager = (() => {
     failedText.textContent = "Failed fetch data for";
   }
 
-  return { renderHomeView, renderInfoView, showFailed };
+  function showLoading() {
+    loadingBox.classList.remove("hidden");
+
+    hideFailed();
+  }
+
+  function hideLoading() {
+    loadingBox.classList.add("hidden");
+  }
+
+  return { renderHomeView, renderInfoView, showLoading, showFailed };
 })();
 
 export { domManager };
