@@ -11,6 +11,7 @@ function formatAddress(address) {
 
 export function formatWeatherData(weatherData) {
   return {
+    icon: weatherData.currentConditions.icon,
     temperature: Math.round(weatherData.currentConditions.temp) + "°C",
     description: weatherData.currentConditions.conditions,
     location: formatAddress(weatherData.resolvedAddress),
