@@ -56,6 +56,7 @@
     "kind-of": "^6.0.3",
     "loader-runner": "^4.3.2",
     "locate-path": "^5.0.0",
+    "lucide": "^1.17.0",
     "merge-stream": "^2.0.0",
     "mime-db": "^1.54.0",
     "neo-async": "^2.6.2",
