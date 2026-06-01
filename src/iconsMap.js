@@ -1,6 +1,17 @@
-import { Sun, Moon, Cloud, CloudRain, CloudSun, CloudMoon } from "lucide";
+import {
+  Sun,
+  Moon,
+  Cloud,
+  CloudRain,
+  CloudSun,
+  CloudMoon,
+  MapPin,
+  Thermometer,
+  Droplet,
+  Wind,
+} from "lucide";
 
-const iconsMap = {
+const weatherIcons = {
   "partly-cloudy-day": CloudSun,
   "partly-cloudy-night": CloudMoon,
   rain: CloudRain,
@@ -9,4 +20,11 @@ const iconsMap = {
   "clear-night": Moon,
 };
 
-export { iconsMap };
+const conditionIcons = {
+  "map-pin": MapPin,
+  thermometer: Thermometer,
+  droplet: Droplet,
+  wind: Wind,
+};
+
+export { weatherIcons, conditionIcons };
