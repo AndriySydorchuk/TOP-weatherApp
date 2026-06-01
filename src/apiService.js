@@ -17,6 +17,7 @@ const apiService = (() => {
       return data;
     } catch (error) {
       console.error("Fetch failed: ", error);
+      throw error;
     }
   }
 
