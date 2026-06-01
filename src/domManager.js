@@ -1,3 +1,6 @@
+import { iconsMap } from "./iconsMap";
+import { createElement } from "lucide";
+
 const domManager = (() => {
   const userInputEl = document.getElementById("cityInput");
 
@@ -12,6 +15,7 @@ const domManager = (() => {
   const infoView = document.querySelector(".info-view");
 
   //general info elenents
+  const iconEl = document.querySelector(".general-info-icon");
   const temperatureEl = document.querySelector(".general-info-temp");
   const descriptionEl = document.querySelector(".general-info-description");
   const locationEl = document.querySelector(".general-info-location");
@@ -23,6 +27,8 @@ const domManager = (() => {
   const dayEl = document.querySelector(".add-info-day");
 
   function setData(weatherData) {
+    const icon = createElement(iconsMap[weatherData.icon]);
+    iconEl.append(icon);
     temperatureEl.textContent = weatherData.temperature;
     descriptionEl.textContent = weatherData.description;
     locationEl.textContent = weatherData.location;
@@ -36,6 +42,7 @@ const domManager = (() => {
   function resetData() {
     userInputEl.value = "";
 
+    iconEl.innerHTML = "";
     temperatureEl.textContent = "";
     descriptionEl.textContent = "";
     locationEl.textContent = "";
