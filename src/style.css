@@ -78,7 +78,8 @@ body {
   color: var(--text-primary);
 }
 
-.loading-box {
+.loading-box,
+.failed-box {
   margin-top: 20px;
 
   padding: 10px 30px;
@@ -88,10 +89,17 @@ body {
   border-radius: 10px;
   border: 2px solid var(--bg-primary);
 
-  background-color: var(--accent-primary);
   color: var(--bg-secondary);
 
   font-size: 20px;
+}
+
+.loading-box {
+  background-color: var(--accent-primary);
+}
+
+.failed-box {
+  background-color: var(--danger);
 }
 
 .city-input {
@@ -164,6 +172,10 @@ body {
 
 .add-info div {
   border-right: 2px solid var(--text-primary);
+}
+
+.failed {
+  outline: 2px dashed var(--danger);
 }
 
 /* keep at the end of file */
