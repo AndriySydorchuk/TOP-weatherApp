@@ -2,7 +2,6 @@ import "./style.css";
 
 import { apiHandler } from "./apiHandler";
 import { domManager } from "./domManager";
-import { parseISO, format } from "date-fns";
 
 const userInputEl = document.getElementById("cityInput");
 const gobackBtn = document.getElementById("gobackBtn");
@@ -22,8 +21,3 @@ userInputEl.addEventListener("keydown", (e) => {
 gobackBtn.addEventListener("click", () => {
   domManager.renderHomeView();
 });
-
-export function formatDate(dateStr) {
-  const date = parseISO(dateStr);
-  return format(date, "EEEE, MMMM d, yyyy");
-}
