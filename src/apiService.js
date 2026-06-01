@@ -5,7 +5,9 @@ const apiService = (() => {
 
   async function getWeatherData(location) {
     try {
-      const response = await fetch(`${API_ENDPOINT}${location}?key=${API_KEY}`);
+      const response = await fetch(
+        `${API_ENDPOINT}${location}?key=${API_KEY}&unitGroup=metric`,
+      );
 
       if (!response.ok) {
         throw new Error(
