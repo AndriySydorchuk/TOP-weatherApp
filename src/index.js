@@ -1,6 +1,6 @@
 import "./style.css";
 
-import { apiHandler } from "./apiHandler";
+import { apiService } from "./apiService";
 import { domManager } from "./domManager";
 
 const userInputEl = document.getElementById("cityInput");
@@ -10,7 +10,7 @@ userInputEl.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     const userLocation = userInputEl.value.trim();
 
-    apiHandler.getWeatherData(userLocation).then(function (weatherData) {
+    apiService.getWeatherData(userLocation).then(function (weatherData) {
       domManager.renderInfoView(weatherData);
 
       console.log(weatherData);

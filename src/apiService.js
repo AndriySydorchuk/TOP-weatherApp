@@ -1,4 +1,4 @@
-const apiHandler = (() => {
+const apiService = (() => {
   const API_KEY = "REDACTED";
   const API_ENDPOINT =
     "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/";
@@ -23,4 +23,4 @@ const apiHandler = (() => {
   return { getWeatherData };
 })();
 
-export { apiHandler };
+export { apiService };
