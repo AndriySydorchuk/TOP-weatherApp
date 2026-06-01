@@ -151,6 +151,11 @@ body {
   text-align: center;
 }
 
+.general-info-icon svg {
+  width: 80px;
+  height: auto;
+}
+
 .general-info-temp {
   font-size: 56px;
   font-weight: bold;
