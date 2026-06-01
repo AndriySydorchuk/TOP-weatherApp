@@ -17,7 +17,8 @@ userInputEl.addEventListener("keydown", (e) => {
         console.log(weatherData);
         return formatWeatherData(weatherData);
       })
-      .then(domManager.renderInfoView);
+      .then(domManager.renderInfoView)
+      .catch((err) => domManager.showFailed(userLocation));
   }
 });
 
