@@ -24,6 +24,8 @@ const app = (() => {
   }
 
   function init() {
+    domManager.init();
+
     userInputEl.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
         handleSearch();
