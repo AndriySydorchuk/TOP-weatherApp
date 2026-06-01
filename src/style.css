@@ -161,6 +161,16 @@ body {
   font-weight: bold;
 }
 
+.general-info-location {
+  display: flex;
+  gap: 8px;
+}
+
+.general-info-location-icon {
+  display: flex;
+  align-items: center;
+}
+
 .add-info {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -175,8 +185,29 @@ body {
   padding-top: 20px;
 }
 
-.add-info div {
-  border-right: 2px solid var(--text-primary);
+.add-info-feelslike,
+.add-info-humidity,
+.add-info-windspeed {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+
+  border-right: 1.5px solid var(--text-primary);
+}
+
+.add-info-feelslike-icon,
+.add-info-humidity-icon,
+.add-info-windspeed-icon {
+  display: flex;
+  align-items: center;
+}
+
+.add-info-feelslike-icon svg,
+.add-info-humidity-icon svg,
+.add-info-windspeed-icon svg {
+  width: 35px;
+  height: auto;
 }
 
 .failed {
