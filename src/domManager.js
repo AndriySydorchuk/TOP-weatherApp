@@ -1,3 +1,5 @@
+import { convertFahrenheitToCelsius, convertMphToMs, formatDate } from ".";
+
 const domManager = (() => {
   const userInputEl = document.getElementById("cityInput");
 
@@ -17,14 +19,19 @@ const domManager = (() => {
   const dayEl = document.querySelector(".add-info-day");
 
   function setData(weatherData) {
-    temperatureEl.textContent = weatherData.temperature + "°C";
+    temperatureEl.textContent =
+      convertFahrenheitToCelsius(weatherData.currentConditions.temp) + "°C";
     descriptionEl.textContent = weatherData.description;
-    locationEl.textContent = weatherData.location;
+    locationEl.textContent = weatherData.resolvedAddress;
 
-    feelslikeEl.textContent = weatherData.feelslike + "°C";
-    humidityEl.textContent = weatherData.humidity + "%";
-    windspeedEl.textContent = weatherData.windspeed + "m/s";
-    dayEl.textContent = weatherData.day;
+    feelslikeEl.textContent =
+      convertFahrenheitToCelsius(weatherData.currentConditions.feelslike) +
+      "°C";
+    humidityEl.textContent =
+      Math.round(weatherData.currentConditions.humidity) + "%";
+    windspeedEl.textContent =
+      convertMphToMs(weatherData.currentConditions.windspeed) + "m/s";
+    dayEl.textContent = formatDate(weatherData.days[0].datetime);
   }
 
   function resetData() {
