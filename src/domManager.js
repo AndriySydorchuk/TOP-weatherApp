@@ -1,4 +1,4 @@
-import { iconsMap } from "./iconsMap";
+import { weatherIcons, conditionIcons } from "./iconsMap";
 import { createElement } from "lucide";
 
 const domManager = (() => {
@@ -15,41 +15,53 @@ const domManager = (() => {
   const infoView = document.querySelector(".info-view");
 
   //general info elenents
-  const iconEl = document.querySelector(".general-info-icon");
+  const weatherIconEl = document.querySelector(".general-info-icon");
   const temperatureEl = document.querySelector(".general-info-temp");
   const descriptionEl = document.querySelector(".general-info-description");
-  const locationEl = document.querySelector(".general-info-location");
+  const locationIconEl = document.querySelector(".general-info-location-icon");
+  const locationTextEl = document.querySelector(".general-info-location-text");
 
   // additional info elements
-  const feelslikeEl = document.querySelector(".add-info-feelslike");
-  const humidityEl = document.querySelector(".add-info-humidity");
-  const windspeedEl = document.querySelector(".add-info-windspeed");
+  const feelslikeIconEl = document.querySelector(".add-info-feelslike-icon");
+  const feelslikeTextEl = document.querySelector(".add-info-feelslike-text");
+
+  const humidityIconEl = document.querySelector(".add-info-humidity-icon");
+  const humidityTextEl = document.querySelector(".add-info-humidity-text");
+
+  const windspeedIconEl = document.querySelector(".add-info-windspeed-icon");
+  const windspeedTextEl = document.querySelector(".add-info-windspeed-text");
+
   const dayEl = document.querySelector(".add-info-day");
 
+  function init() {
+    createConditionIcons();
+  }
+
   function setData(weatherData) {
-    const icon = createElement(iconsMap[weatherData.icon]);
-    iconEl.append(icon);
+    const weatherIcon = createElement(weatherIcons[weatherData.icon]);
+    weatherIconEl.append(weatherIcon);
+
     temperatureEl.textContent = weatherData.temperature;
     descriptionEl.textContent = weatherData.description;
-    locationEl.textContent = weatherData.location;
+    locationTextEl.textContent = weatherData.location;
 
-    feelslikeEl.textContent = weatherData.feelslike;
-    humidityEl.textContent = weatherData.humidity;
-    windspeedEl.textContent = weatherData.windspeed;
+    feelslikeTextEl.textContent = weatherData.feelslike;
+    humidityTextEl.textContent = weatherData.humidity;
+    windspeedTextEl.textContent = weatherData.windspeed;
     dayEl.textContent = weatherData.day;
   }
 
   function resetData() {
     userInputEl.value = "";
 
-    iconEl.innerHTML = "";
+    weatherIconEl.innerHTML = "";
     temperatureEl.textContent = "";
     descriptionEl.textContent = "";
-    locationEl.textContent = "";
+    locationTextEl.textContent = "";
 
-    feelslikeEl.textContent = "";
-    humidityEl.textContent = "";
-    windspeedEl.textContent = "";
+    feelslikeTextEl.textContent = "";
+    humidityTextEl.textContent = "";
+    windspeedTextEl.textContent = "";
     dayEl.textContent = "";
   }
 
@@ -102,7 +114,21 @@ const domManager = (() => {
     loadingBox.classList.add("hidden");
   }
 
-  return { renderHomeView, renderInfoView, showLoading, showFailed };
+  function createConditionIcons() {
+    const locationIcon = createElement(conditionIcons["map-pin"]);
+    locationIconEl.append(locationIcon);
+
+    const feelslikeIcon = createElement(conditionIcons.thermometer);
+    feelslikeIconEl.append(feelslikeIcon);
+
+    const humidityIcon = createElement(conditionIcons.droplet);
+    humidityIconEl.append(humidityIcon);
+
+    const windIcon = createElement(conditionIcons.wind);
+    windspeedIconEl.append(windIcon);
+  }
+
+  return { renderHomeView, renderInfoView, showLoading, showFailed, init };
 })();
 
 export { domManager };
