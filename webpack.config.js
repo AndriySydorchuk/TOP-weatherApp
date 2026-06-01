@@ -10,6 +10,7 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+    publicPath: "/TOP-weatherApp/",
   },
 
   devtool: "eval-source-map",
