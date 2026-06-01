@@ -3,7 +3,7 @@ import { formatDate } from "./dateFormatter";
 export function formatWeatherData(weatherData) {
   return {
     temperature: Math.round(weatherData.currentConditions.temp) + "°C",
-    description: weatherData.description,
+    description: weatherData.currentConditions.conditions,
     location: weatherData.resolvedAddress,
     feelslike: Math.round(weatherData.currentConditions.feelslike) + "°C",
     humidity: Math.round(weatherData.currentConditions.humidity) + "%",
