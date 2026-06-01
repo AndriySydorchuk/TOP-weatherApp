@@ -11,6 +11,8 @@ const app = (() => {
 
     if (!userLocation) return;
 
+    domManager.showLoading();
+
     apiService
       .getWeatherData(userLocation)
       .then((weatherData) => {
