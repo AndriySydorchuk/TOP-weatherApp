@@ -1,5 +1,5 @@
 const apiService = (() => {
-  const API_KEY = "REDACTED";
+  const API_KEY = process.env.WEATHER_API_KEY;
   const API_ENDPOINT =
     "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/";
 
