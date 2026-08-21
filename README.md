@@ -4,7 +4,7 @@ A vanilla JavaScript weather app that fetches real-time weather data for any loc
 
 Built as part of [The Odin Project](https://www.theodinproject.com/) curriculum.
 
-**[Live Demo](https://andriysydorchuk.github.io/TOP-weatherApp/)**
+**[Live Demo](https://andrii-sydorchuk.github.io/TOP-weatherApp/)**
 
 ## Screenshots
 
