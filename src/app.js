@@ -16,7 +16,6 @@ const app = (() => {
     apiService
       .getWeatherData(userLocation)
       .then((weatherData) => {
-        console.log(weatherData);
         return formatWeatherData(weatherData);
       })
       .then(domManager.renderInfoView)
